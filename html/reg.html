@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script>
+    window.onload=function()
+    {
+        var oTxt1=document.getElementById('txt1');
+        var oTxt2=document.getElementById('txt2');
+        var oBtn=document.getElementById('btn');
+
+        oBtn.onclick=function()
+        {
+//            var reg=/<[^<>]+>/g;
+//            var reg=/(<[ap]>|<\/[ap]>)/g;
+//            oTxt2.value=oTxt1.value.replace(/(&lt;[ap]&gt;|&lt;\/[ap]&gt;)/g,"");
+            var test = '0012';
+            add('0034');
+        };
+
+
+    };
+
+    function add(args){
+        alert(args);
+    }
+</script>
+</head>
+<body>
+<textarea id="txt1" cols="40" rows="10"></textarea><br />
+<input type="button" value="过滤" id="btn" /><br />
+<textarea id="txt2" cols="40" rows="10"></textarea>
+</body>
+</html>

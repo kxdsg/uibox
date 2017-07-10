@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" charset="utf-8" src="../common/js/jquery-2.1.3.min.js"></script>
+    <title></title>
+    <style>
+        img {
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li>
+            个人信息
+        </li>
+        <li>
+            消息通知
+        </li>
+        <li id="toprealName">
+        </li>
+    </ul>
+    <a><img src="http://api.mas.cn/image/get/system/avatar/0fab6fcf55b84a148f8537ec607d9c42.jpg" alt=""></a>
+</div>
+</body>
+<script>
+    $(document).ready(function(){
+        var level = "02";
+        var statename = level.substr(2,4);
+        console.log("[" + statename + "]");
+        $("#toprealName").append('aaa');
+        $("#toprealName").append('bbb');
+        if(level){
+            console.log('print');
+        } else {
+            console.log('not print');
+        }
+        var list = null;
+        if(list!=null && list.length>0){
+            console.log("not null");
+        } else {
+            console.log("is null");
+        }
+    });
+</script>
+</html>

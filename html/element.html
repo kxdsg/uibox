@@ -1,0 +1,79 @@
+<!--声明文档类型， 注意字母不区分大小写-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--声明编码-->
+    <meta charset="UTF-8">
+    <title>学习测试页面</title>
+    <!--js脚本-->
+    <script></script>
+    <!--内部样式表-->
+    <style type="text/css">
+        body {
+            background-color: gainsboro;
+        }
+        p {
+            color:blue;
+        }
+        a {
+            /*链接样式没有下划线*/
+            text-decoration: none;
+        }
+    </style>
+    <!--CSS样式外部引入-->
+    <link rel="stylesheet" type="text/css" href="../common/css/busStyle.css">
+</head>
+<body>
+<h1>标题1</h1>
+<!--水平分割线-->
+<hr/>
+<h6>标题6</h6>
+
+<p>内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例内容示例</p>
+<p>另一个段落另一个段落另一个段落另一个段落另一个段落另一个段落另一个段落另一个段落另一个段落另一个段落另一个段落另一个段落另一个段落</p>
+
+<!--div是块级元素，会自动换行-->
+<p>something<div>divdivdivdivdivdivdivdivdivdivdivdivdivdivdivdiv</div></p>
+
+<!--span是行级元素，可以内嵌在行中显示-->
+<p>line<span>spanspanspanspanspanspanspanspanspanspanspan</span></p>
+
+<!--链接，注意地址前面需要加上http-->
+<a href="http://www.baidu.com">有事找度娘</a>
+<br/>
+<!--target表示在何处显示, _blank表示新窗口打开-->
+<a href="http://www.zhihu.com" target="_blank">知乎</a>
+
+<h3>未来的方向在哪里？</h3>
+<!--换行，建议使用<br/>，关闭空元素-->
+<br/>
+<!--图像，可以设置高度、宽度改变原图显示-->
+<img src="../common/img/cloud.jpg" height="271" width="476">
+
+<p>
+<strong>粗体</strong>
+
+<em>斜体</em>
+</p>
+
+<a href="#muke">进入慕课</a>
+
+<ul>
+    <li>
+        <!--alt属性表示图片无法加载时显示的文字，另外通常最好指定宽高度显示-->
+        <a id="muke" href="http://www.imooc.com" target="_blank"><img src="../common/img/imooc.png" width="130" height="38" alt="慕课"></a>
+    </li>
+    <li>
+        <a id="google">Google</a>
+    </li>
+    <li>
+        <a id="iteye">ITeye</a>
+    </li>
+</ul>
+
+<p style="color: red; font-size: large">内联样式，字体红色</p>
+
+
+
+</body>
+</html>

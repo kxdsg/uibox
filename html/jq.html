@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery test page</title>
+    <script type="text/javascript" charset="utf-8" src="../common/js/jquery-2.1.3.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="../common/css/busStyle.css" />-->
+</head>
+<body>
+    <ul>
+        <li>
+            <span>1</span>
+            <p>item1</p>
+        </li>
+        <li>
+            <span>2</span>
+            <p>item2</p>
+        </li>
+        <li>
+            <span>3</span>
+            <p>item3</p>
+        </li>
+    </ul>
+</body>
+<script>
+    $(document).ready(function(){
+       var v = "item2";
+        $("ul li").each(function(){
+           $me = $(this);
+//            console.log($me.find("p").text());
+            var p = $me.find("p");
+            if(v == p.text()){
+                p.css('backgroundColor', '#FF7F50');
+            }
+        });
+        var dt = new Date();
+        console.log(dt.getFullYear()); //从 Date 对象以四位数字返回年份
+        console.log(dt.getMonth()); //返回月份（0-11）
+        console.log(dt.getTime()); //返回 1970 年 1 月 1 日至今的毫秒数
+
+        function fillZero(a){
+            if(a<10){
+                return "0"+a;
+            } else {
+                return a;
+            }
+        }
+
+        function format(date){
+            return date.getFullYear() + "-" + fillZero(date.getMonth()+1);
+        }
+
+        function getLastSpecMonths(param){
+            var months = [];
+            var date = new Date();
+            for(var i=0;i<param;i++){
+                months[i] = format(date);
+                date.setMonth(date.getMonth()-1);
+            }
+            return months;
+        }
+        var test = getLastSpecMonths(3);
+        console.log(test);
+    });
+
+
+</script>
+</html>
